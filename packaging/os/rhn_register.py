@@ -17,6 +17,10 @@
 # You should have received a copy of the GNU General Public License
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 
+ANSIBLE_METADATA = {'status': ['preview'],
+                    'supported_by': 'core',
+                    'version': '1.0'}
+
 DOCUMENTATION = '''
 ---
 module: rhn_register
@@ -422,4 +426,5 @@ def main():
             module.exit_json(changed=True, msg="System successfully unregistered from %s." % rhn.hostname)
 
 
-main()
+if __name__ == '__main__':
+    main()

@@ -18,6 +18,10 @@
 # You should have received a copy of the GNU General Public License
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 
+ANSIBLE_METADATA = {'status': ['stableinterface'],
+                    'supported_by': 'core',
+                    'version': '1.0'}
+
 DOCUMENTATION = '''
 ---
 module: file
@@ -100,8 +104,8 @@ EXAMPLES = '''
     group: foo
     state: link
 - file:
-    src: /tmp/{{ item.src }}
-    dest: "{{ item.dest }}"
+    src: '/tmp/{{ item.src }}'
+    dest: '{{ item.dest }}'
     state: link
   with_items:
     - { src: 'x', dest: 'y' }
@@ -124,7 +128,6 @@ EXAMPLES = '''
     path: /etc/some_directory
     state: directory
     mode: 0755
-
 '''
 
 import errno

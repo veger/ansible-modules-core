@@ -18,6 +18,10 @@
 # You should have received a copy of the GNU General Public License
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 
+ANSIBLE_METADATA = {'status': ['deprecated'],
+                    'supported_by': 'community',
+                    'version': '1.0'}
+
 DOCUMENTATION = '''
 ---
 module: accelerate
@@ -738,4 +742,5 @@ def main():
         # try to start up the daemon
         daemonize(module, password, port, timeout, minutes, ipv6, pid_file)
 
-main()
+if __name__ == '__main__':
+    main()

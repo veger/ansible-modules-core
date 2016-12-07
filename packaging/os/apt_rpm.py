@@ -19,6 +19,10 @@
 # along with this software.  If not, see <http://www.gnu.org/licenses/>.
 
 
+ANSIBLE_METADATA = {'status': ['preview'],
+                    'supported_by': 'community',
+                    'version': '1.0'}
+
 DOCUMENTATION = '''
 ---
 module: apt_rpm
@@ -179,4 +183,5 @@ def main():
 # this is magic, see lib/ansible/module_common.py
 from ansible.module_utils.basic import *
     
-main()        
+if __name__ == '__main__':
+    main()

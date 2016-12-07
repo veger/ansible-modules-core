@@ -26,6 +26,10 @@ import fnmatch
 import time
 import re
 
+ANSIBLE_METADATA = {'status': ['stableinterface'],
+                    'supported_by': 'core',
+                    'version': '1.0'}
+
 DOCUMENTATION = '''
 ---
 module: find
@@ -374,5 +378,6 @@ def main():
 
 # import module snippets
 from ansible.module_utils.basic import *
-main()
 
+if __name__ == '__main__':
+    main()
